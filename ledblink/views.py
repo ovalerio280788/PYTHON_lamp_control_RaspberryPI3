@@ -1,21 +1,19 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# import RPi.GPIO as GPIO
-import time
+import RPi.GPIO as GPIO
 
-# GPIO.setmode(GPIO.BOARD)
-# GPIO.setup(18, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(18, GPIO.OUT)
 
 
 def blinker(request):
     status = "pending"
     if 'on' in request.POST:
-        # GPIO.output(18, 1)
-        print("It will be on")
+        print("Turning on")
+        GPIO.output(18, 1)
         status = 'on'
     elif 'off' in request.POST:
-        # GPIO.output(18, 0)
-        print("It will be off")
+        print("Turning off")
+        GPIO.output(18, 0)
         status = 'off'
 
     context = {
