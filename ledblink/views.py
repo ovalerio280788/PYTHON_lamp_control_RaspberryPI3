@@ -9,11 +9,11 @@ def blinker(request):
     status = "pending"
     if 'on' in request.POST:
         print("Turning on")
-        GPIO.output(18, 1)
+        GPIO.output(18, 0)
         status = 'on'
     elif 'off' in request.POST:
         print("Turning off")
-        GPIO.output(18, 0)
+        GPIO.output(18, 1)
         status = 'off'
 
     context = {

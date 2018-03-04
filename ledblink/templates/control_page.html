@@ -5,11 +5,12 @@
     <title>Control Lampara</title>
 </head>
 <body>
-
-<p>Current Status: {{ status }}</p>
-<form action="" method="post">{% csrf_token %}
-    <input type="submit" name="on" value="on"/>
-    <input type="submit" name="off" value="off"/>
-</form>
+<div style="font-size: 2em;">
+    <p>Current Status: {{ status }}</p>
+    <form action="" method="post">{% csrf_token %}
+        <input type="submit" name="on" value="on"/>
+        <input type="submit" name="off" value="off"/>
+    </form>
+</div>
 </body>
 </html>
