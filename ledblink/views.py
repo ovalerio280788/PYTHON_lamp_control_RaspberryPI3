@@ -9,8 +9,8 @@ from ledblink.models import ControlLamp
 pin_number = 18
 
 
-# GPIO.setmode(GPIO.BOARD)
-# GPIO.setup(pin_number, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(pin_number, GPIO.OUT)
 
 
 def get_pin_state():
