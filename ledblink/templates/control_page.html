@@ -3,12 +3,12 @@
 {% block content %}
 
 <div style="font-size: 2em;">
-    <p>Current Status: {{ status }}</p>
+    <p>Current Status: {{ status }}</p><hr/><hr class="style-two"/>
     <form action="" method="post">{% csrf_token %}
-        <!--<input style="font-size: 2em;" type="submit" name="on" value="On"/>-->
-        <!--<input style="font-size: 2em;" type="submit" name="off" value="Off"/>-->
         {{ form.as_p }}
-        <input type="submit" value="Submit"/>
+        <hr class="style-two"/>
+        <hr class="style-two"/>
+        <input class="btn btn-success" type="submit" value="Submit"/>
     </form>
 </div>
 

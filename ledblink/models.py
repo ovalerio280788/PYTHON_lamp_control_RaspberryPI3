@@ -6,7 +6,7 @@ class ControlLamp(models.Model):
         ('1', 'On'),
         ('0', 'Off')
     )
-    state = models.CharField(max_length=1, choices=TURN_CHOICES)
+    state = models.CharField(max_length=1, choices=TURN_CHOICES, blank=False, default='0')
 
     def __str__(self):
         return str(self.pk)
