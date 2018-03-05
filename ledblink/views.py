@@ -13,11 +13,10 @@ GPIO.setup(pin_number, GPIO.OUT)
 def get_pin_state():
     state = ControlLamp.objects.all()[0].state
 
-    if state:
+    if int(state):
         return "On"
     else:
         return "Off"
-    # return "On"
 
 
 def blinker(request):
