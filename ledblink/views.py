@@ -11,9 +11,7 @@ GPIO.setup(pin_number, GPIO.OUT)
 
 
 def get_pin_state():
-    GPIO.setup(pin_number, GPIO.IN)
-    state = GPIO.input(pin_number)
-    GPIO.setup(pin_number, GPIO.OUT)
+    state = ControlLamp.objects.all()[0].state
 
     if state:
         return "On"
