@@ -15,7 +15,7 @@ def get_pin_state():
     state = GPIO.input(pin_number)
     GPIO.setup(pin_number, GPIO.OUT)
 
-    if not state:
+    if state:
         return "On"
     else:
         return "Off"
