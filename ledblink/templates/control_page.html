@@ -3,7 +3,9 @@
 {% block content %}
 
 <div style="font-size: 2em;">
-    <p>Current Status: {{ status }}</p><hr/><hr class="style-two"/>
+    <p>Current Status: {{ status }}</p><hr/>
+    <hr class="style-two"/>
+    <hr class="style-two"/>
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
         <hr class="style-two"/>
