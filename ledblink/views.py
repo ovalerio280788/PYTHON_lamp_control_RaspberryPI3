@@ -27,10 +27,10 @@ def blinker(request):
         form = UserLedBlinkForm(request.POST or None)
         if form.is_valid():
             if int(request.POST['state']):
-                print_timestamp(message="Turning On")
+                print_timestamp(message="Turning On pin #" + str(pin_number))
                 GPIO.output(pin_number, 0)
             else:
-                print_timestamp(message="Turning Off")
+                print_timestamp(message="Turning Off pin #" + str(pin_number))
                 GPIO.output(pin_number, 1)
 
             if len(ControlLamp.objects.all()) > 1:
