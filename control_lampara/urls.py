@@ -20,5 +20,5 @@ from ledblink.views import blinker
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^control-lampara/$', blinker),
+    url(r'^$', blinker, name='home'),
 ]

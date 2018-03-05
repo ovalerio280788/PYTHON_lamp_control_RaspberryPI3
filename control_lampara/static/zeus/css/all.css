@@ -1,0 +1,18 @@
+body {background-color: lavender;}
+
+.i-am-centered-20,.join { margin: auto; max-width: 100%; width: 20%;}
+.i-am-centered-30 { margin: auto; max-width: 100%; width: 30%;}
+.i-am-centered-40 { margin: auto; max-width: 100%; width: 40%;}
+.i-am-centered-50 { margin: auto; max-width: 100%; width: 50%;}
+.i-am-centered-60 { margin: auto; max-width: 100%; width: 60%;}
+.i-am-centered-70 { margin: auto; max-width: 100%; width: 70%;}
+.i-am-centered-80 { margin: auto; max-width: 100%; width: 80%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*='i-am-centered-'] {
+        width: 110%;
+    }
+
+    .join-header {margin-top: 2px;}
+}

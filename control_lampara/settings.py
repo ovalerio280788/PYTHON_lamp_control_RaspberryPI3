@@ -25,7 +25,7 @@ SECRET_KEY = 'hrknsa#z4z@vv!hz24ai9vue#&l8o#cop%^i774#oj!i6g9767'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.105.132']
+ALLOWED_HOSTS = ['192.168.105.132', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ledblink',
+    'control_lampara',
 ]
 
 MIDDLEWARE = [
@@ -118,4 +119,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'

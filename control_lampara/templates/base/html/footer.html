@@ -1,0 +1,14 @@
+<footer id="footer">
+<hr/>
+<p class="text-muted text-center">© 2018 Control Lampara</p>
+</footer>
+<script>
+  $(document).ready(function() {
+   var docHeight = $(window).height();
+   var footerHeight = $('#footer').height();
+   var footerTop = $('#footer').position().top + footerHeight;
+   if (footerTop < docHeight) {
+    $('#footer').css('margin-top', (docHeight - footerTop) + 'px');
+   }
+  });
+</script>

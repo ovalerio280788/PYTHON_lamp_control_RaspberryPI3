@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Control Lampara</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+
 <div style="font-size: 2em;">
     <p>Current Status: {{ status }}</p>
     <form action="" method="post">{% csrf_token %}
-        <input style="font-size: 2em;" type="submit" name="on" value="On"/>
-        <input style="font-size: 2em;" type="submit" name="off" value="Off"/>
+        <!--<input style="font-size: 2em;" type="submit" name="on" value="On"/>-->
+        <!--<input style="font-size: 2em;" type="submit" name="off" value="Off"/>-->
+        {{ form.as_p }}
+        <input type="submit" value="Submit"/>
     </form>
 </div>
-</body>
-</html>
+
+{% endblock %}
