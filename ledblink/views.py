@@ -1,14 +1,11 @@
-import datetime
+import RPi.GPIO as GPIO
 from django.shortcuts import render
-# import RPi.GPIO as GPIO
 
 from control_lampara.utils import print_timestamp
 from ledblink.forms import UserLedBlinkForm
 from ledblink.models import ControlLamp
 
 pin_number = 18
-
-
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pin_number, GPIO.OUT)
 
